@@ -1,0 +1,135 @@
+/* Reset de base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Variables */
+:root {
+  --text-dark-brown: rgb(50, 0, 0);
+  --text-red: rgb(150, 25, 25);
+  --background-light-yellow: rgb(250, 250, 200);
+  --background-khaki: rgb(200, 200, 150);
+}
+
+/* Corps de la page */
+/* Utiliser min-height:100vh pour garantir que la page occupe au moins la hauteur de la fenêtre.
+   body reste un conteneur flex en colonne pour pouvoir pousser le footer vers le bas. */
+body {
+  font-family: 'Montserrat', 'Lato', sans-serif;
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column; /* en colonne */
+  justify-content: space-between;
+  align-items: center; /* !VERTICALEMENT au centre de la ligne */
+  text-align: center;
+  color: var(--text-red);
+  background: var(--background-light-yellow);
+  padding: 1rem;
+}
+
+/* En-tête et bas-de-page */
+.header,
+.footer {
+  width: 100%;
+}
+
+/* Conteneur principal */
+/* max-width + margin auto permet de centrer visuellement le contenu tout en gardant width:100% */
+.container {
+  width: 100%;
+  max-width: 1200px; /* limite la largeur sur grands écrans */
+  margin: 0 auto; /* centre le container dans la page */
+  display: flex;
+  flex-wrap: wrap; /* retour à la ligne */
+  justify-content: center; /* centre le contenu horizontalement par défaut */
+  align-items: center; /* !VERTICALEMENT au centre de la ligne */
+  text-align: center;
+  color: var(--text-dark-brown);
+  background: var(--background-khaki);
+  padding: 1rem;
+}
+
+/* Barre de navigation */
+/* On centre le contenu (menu) et on utilise position:relative pour placer le logo en absolu */
+.header-navbar,
+.footer-navbar {
+  display: flex;
+  flex-wrap: wrap; /* retour à la ligne */
+  justify-content: center; /* menu centré */
+  align-items: center; /* !VERTICALEMENT au centre de la ligne */
+  text-align: center;
+  width: 100%;
+  position: relative; /* nécessaire pour .logo position:absolute */
+}
+
+/* Logo */
+/* placer l'image du logo à gauche via position:absolute */
+.logo {
+  position: absolute;
+  left: 1rem;
+  top: 50%;
+  transform: translateY(-50%); /* centre verticalement par rapport à la navbar */
+}
+.logo img {
+  transform: scaleX(-1); /* effet miroir horizontal */
+  max-width: 100px; /* taille max responsive */
+  height: auto;
+  display: block;
+  border: 2px solid var(--text-red);
+  border-radius: 50% 50% 50% 50% / 10% 10% 60% 60%; /* fait à la main, difficilement */
+}
+
+/* Liste de navigation */
+/* list-style none pour enlever les puces; gap pour l'espacement */
+.nav-list {
+  display: flex;
+  flex-wrap: wrap; /* retour à la ligne */
+  gap: 1rem; /* espace entre les éléments */
+  list-style: none; /* supprime les puces */
+  padding: 0;
+  margin: 0; /* éviter décalages imprévus */
+  align-items: center; /* !VERTICALEMENT au centre de la ligne */
+}
+
+/* Élément de liste */
+li {
+  display: flex;
+  align-items: center; /* !VERTICALEMENT au centre de la ligne */
+  padding: 0.5rem 1rem; /* léger padding pour cliquer plus facilement */
+  text-align: center;
+}
+
+/* Lien dans la liste */
+li a {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem; /* espace entre icône et texte */
+  text-decoration: none;
+  color: inherit;
+  font-weight: bold;
+  padding: 0.25rem 0.5rem;
+  border-radius: 4px; /* améliore les états hover/focus */
+}
+
+/* Responsive basique */
+@media (max-width: 600px) {
+  .header-navbar {
+    flex-direction: column;
+    position: static; /* désactive absolute logo pour mobile */
+  }
+  .logo {
+    position: static;
+    transform: none;
+    margin-bottom: 0.5rem;
+  }
+  .nav-list {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  .logo img {
+    max-width: 80px;
+  }
+}
