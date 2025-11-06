@@ -2,7 +2,7 @@
     <div class="container">
         <nav class="header-navbar">
             <a href="index.php" class="logo" title="Accueil">
-                <img src="assets/images/logo_livre-or2.png" alt="Logo du site">
+                <img src="assets/images/logo_livre-or.png" alt="Logo du site">
             </a>
             <ul class="nav-list">
 
