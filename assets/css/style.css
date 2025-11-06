@@ -7,8 +7,8 @@
 
 /* Variables */
 :root {
-  --text-dark-brown: rgb(50, 0, 0);
-  --text-red: rgb(150, 25, 25);
+  --text-dark-red: rgb(125, 0, 0);
+  --text-red: rgb(175, 0, 0);
   --background-light-yellow: rgb(250, 250, 200);
   --background-khaki: rgb(200, 200, 150);
 }
@@ -47,7 +47,7 @@ body {
   justify-content: center; /* centre le contenu horizontalement par défaut */
   align-items: center; /* !VERTICALEMENT au centre de la ligne */
   text-align: center;
-  color: var(--text-dark-brown);
+  color: var(--text-dark-red);
   background: var(--background-khaki);
   padding: 1rem;
 }
@@ -72,14 +72,17 @@ body {
   left: 1rem;
   top: 50%;
   transform: translateY(-50%); /* centre verticalement par rapport à la navbar */
+  border-radius: 50% 50% 50% 50% / 10% 10% 60% 60%; /* fait à la main, difficilement */
+  background: var(--background-light-yellow);
 }
 .logo img {
   transform: scaleX(-1); /* effet miroir horizontal */
   max-width: 100px; /* taille max responsive */
   height: auto;
   display: block;
-  border: 2px solid var(--text-red);
+  border: 2px solid var(--text-dark-red);
   border-radius: 50% 50% 50% 50% / 10% 10% 60% 60%; /* fait à la main, difficilement */
+  padding: 0.12rem;
 }
 
 /* Liste de navigation */
