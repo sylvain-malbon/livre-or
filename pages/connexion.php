@@ -19,37 +19,41 @@ session_start();
     <?php include_once '../includes/header.php'; ?>
 
     <main>
-        <h1>Connexion</h1>
-        <p>Connectez-vous à votre compte</p>
+        <div class="form-page">
 
-        <section class="login-form">
-            <div class="form-content">
+            <h1>Connexion</h1>
+            <p>Connectez-vous à votre compte</p>
 
-                <form method="POST" class="form" action="">
-                    <input type="hidden" name="" value="">
+            <section class="login-form">
+                <div class="form-content">
 
-                    <div class="form-group">
-                        <label for="">Nom d'utilisateur</label>
-                        <input type="" id="" name="" required
-                            value=""
-                            placeholder="Votre nom d'utilisateur">
-                    </div>
+                    <form method="POST" class="form" action="">
+                        <input type="hidden" name="" value="">
 
-                    <div class="form-group">
-                        <label for="password">Mot de passe</label>
-                        <input type="password" id="password" name="password" required
-                            placeholder="Votre mot de passe">
-                    </div>
+                        <div class="form-group">
+                            <label for="">Nom d'utilisateur</label>
+                            <input type="" id="" name="" required
+                                value=""
+                                placeholder="Votre nom d'utilisateur">
+                        </div>
 
-                    <button type="submit" class="form-button">
-                        Se connecter
-                    </button>
-                </form>
+                        <div class="form-group">
+                            <label for="password">Mot de passe</label>
+                            <input type="password" id="password" name="password" required
+                                placeholder="Votre mot de passe">
+                        </div>
 
-                <p>Vous n'avez pas encore de compte ? <a href="inscription.php">Inscrivez-vous</a> pour laisser un commentaire.</p>
-            </div>
+                        <button type="submit" class="form-button">
+                            Se connecter
+                        </button>
+                    </form>
 
-        </section>
+                </div>
+            </section>
+
+            <p>Vous n'avez pas encore de compte ? <a href="inscription.php">Inscrivez-vous</a> pour laisser un commentaire.</p>
+
+        </div>
     </main>
 
     <?php include_once '../includes/footer.php'; ?>

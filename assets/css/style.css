@@ -5,12 +5,12 @@
 }
 
 :root {
-  --text-dark-red: rgb(125, 0, 0);
-  --text-red: rgb(175, 0, 0);
-  --background-light-yellow: rgb(250, 250, 200);
-  --background-very-light-yellow: rgba(250, 250, 200, 0.5);
-  --background-khaki: rgb(200, 200, 150);
-  --background-dark-khaki: rgb(100, 100, 50);
+  --dark-red: rgb(125, 0, 0);
+  --red: rgb(175, 0, 0);
+  --light-yellow: rgb(250, 250, 200);
+  --very-light-yellow: rgba(250, 250, 200, 0.5);
+  --khaki: rgb(200, 200, 150);
+  --dark-khaki: rgb(100, 100, 50);
 }
 
 body {
@@ -22,8 +22,8 @@ body {
   justify-content: space-between;
   align-items: stretch;
   text-align: center;
-  color: var(--text-dark-red);
-  background: var(--background-light-yellow);
+  color: var(--dark-red);
+  background: var(--light-yellow);
 }
 
 .header,
@@ -32,11 +32,11 @@ body {
 }
 
 .header {
-  border-bottom: 2px solid var(--text-dark-red);
+  border-bottom: 2px solid var(--dark-red);
 }
 
 .footer {
-  border-top: 2px solid var(--text-dark-red);
+  border-top: 2px solid var(--dark-red);
 }
 
 .container {
@@ -48,8 +48,8 @@ body {
   justify-content: center;
   align-items: center;
   text-align: center;
-  color: var(--text-red);
-  background: var(--background-khaki);
+  color: var(--red);
+  background: var(--khaki);
   padding: 1rem;
 }
 
@@ -81,7 +81,7 @@ body {
   left: -1.75rem;
   transform: translateY(-50%);
   border-radius: 50% 50% 50% 50% / 10% 10% 60% 60%;
-  background: var(--background-light-yellow);
+  background: var(--light-yellow);
   z-index: 5;
 }
 
@@ -91,7 +91,7 @@ body {
   max-width: 100px;
   height: auto;
   display: block;
-  border: 2px solid var(--text-dark-red);
+  border: 2px solid var(--dark-red);
   border-radius: 50% 50% 50% 50% / 10% 10% 60% 60%;
   padding: 0.12rem;
 }
@@ -116,8 +116,8 @@ body {
 }
 
 .logo img:active {
-  border: 4px solid var(--text-red);
-  box-shadow: 0px 1px 5px var(--background-dark-khaki);
+  border: 4px solid var(--red);
+  box-shadow: 0px 1px 5px var(--dark-khaki);
 }
 
 .nav-list {
@@ -150,25 +150,23 @@ li {
 }
 
 .header li a:hover {
-  color: var(--text-dark-red);
-  background: var(
-    --background-very-light-yellow
-  ); /* very-light-yellow = light-yellow : opacité 50% */
+  color: var(--dark-red);
+  background: var(--very-light-yellow); /* very-light-yellow = light-yellow : opacité 50% */
   padding: 0.5rem 1rem;
   border-radius: 4px;
   border: 1px solid transparent;
 }
 
 .header li a:visited {
-  color: var(--background-dark-khaki);
+  color: var(--dark-khaki);
 }
 
 .header li a:focus {
-  border: 1px solid var(--text-red);
+  border: 1px solid var(--red);
 }
 
 .header .separateur {
-  color: var(--text-dark-red);
+  color: var(--dark-red);
 }
 
 .footer li a {
@@ -184,23 +182,23 @@ li {
 
 .footer li a:hover {
   text-decoration: underline;
-  color: var(--text-dark-red);
+  color: var(--dark-red);
   padding: 0.5rem 1rem;
   border-radius: 4px;
 }
 
 .footer li a:visited {
-  color: var(--background-dark-khaki);
+  color: var(--dark-khaki);
 }
 
 .footer .separateur {
-  color: var(--background-khaki);
+  color: var(--khaki);
 }
 
 /* ====================================================================================================== */
 /* === HERO VIDEO === */
 .hero {
-  color: var(--background-light-yellow);
+  color: var(--light-yellow);
   position: relative;
   width: 100vw;
   height: 148vh;
@@ -253,7 +251,7 @@ video.hero-video {
 }
 
 .hero a {
-  color: var(--background-khaki);
+  color: var(--khaki);
   margin: 0 0.25rem 0 0.25rem;
 }
 
@@ -280,6 +278,57 @@ video.hero-video {
   .hero-content h1 {
     font-size: 1.2rem;
   }
+}
+
+/* FORMULAIRES */
+
+.form-page h1 {
+  letter-spacing: 0.03rem;
+  color: var(--red);
+}
+
+.register-form,
+.login-form {
+  margin: 2rem 0 2rem 0;
+}
+
+.form-group {
+  margin-top: 1rem;
+}
+
+input {
+  color: var(--dark-red);
+  background: white;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 0.25rem 0rem 0.25rem 0.25rem;
+  border-radius: 8px;
+  border: 1px solid var(--dark-red);
+}
+
+.form-button {
+  margin-top: 1.5rem;
+}
+
+button {
+  letter-spacing: 0.07rem;
+  color: var(--red);
+  background: var(--khaki);
+  text-decoration: none;
+  font-weight: bold;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  border: 2px solid transparent;
+}
+
+button:hover {
+  background: var(--light-yellow);
+  text-decoration: none;
+  color: inherit;
+  font-weight: bold;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  border: 2px solid var(--khaki);
 }
 
 /* ====================================================================================================== */
