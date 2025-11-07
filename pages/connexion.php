@@ -27,11 +27,12 @@ session_start();
 
                 <form method="POST" class="form" action="">
                     <input type="hidden" name="" value="">
+
                     <div class="form-group">
-                        <label for="email">Adresse email</label>
-                        <input type="email" id="email" name="email" required
+                        <label for="">Nom d'utilisateur</label>
+                        <input type="" id="" name="" required
                             value=""
-                            placeholder="votre@email.com">
+                            placeholder="Votre nom d'utilisateur">
                     </div>
 
                     <div class="form-group">
@@ -40,7 +41,7 @@ session_start();
                             placeholder="Votre mot de passe">
                     </div>
 
-                    <button type="submit" class="form-btn">
+                    <button type="submit" class="form-button">
                         Se connecter
                     </button>
                 </form>
