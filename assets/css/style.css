@@ -8,6 +8,7 @@
   --text-dark-red: rgb(125, 0, 0);
   --text-red: rgb(175, 0, 0);
   --background-light-yellow: rgb(250, 250, 200);
+  --background-very-light-yellow: rgba(250, 250, 200, 0.5);
   --background-khaki: rgb(200, 200, 150);
   --background-dark-khaki: rgb(100, 100, 50);
 }
@@ -52,8 +53,19 @@ body {
   padding: 1rem;
 }
 
-.header-navbar,
+.header-navbar {
+  margin-left: 11.5rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+  position: relative;
+}
+
 .footer-navbar {
+  margin-left: 8rem;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -66,7 +78,7 @@ body {
 .logo {
   position: absolute;
   top: 2.75rem;
-  left: 5rem;
+  left: -1.75rem;
   transform: translateY(-50%);
   border-radius: 50% 50% 50% 50% / 10% 10% 60% 60%;
   background: var(--background-light-yellow);
@@ -75,7 +87,7 @@ body {
 
 .logo img {
   position: relative;
-  transform: scaleX(-1);
+  transform: scaleX(1);
   max-width: 100px;
   height: auto;
   display: block;
@@ -87,7 +99,7 @@ body {
 .logo:hover {
   position: absolute;
   top: 2.75rem;
-  left: 5rem;
+  left: -1.75rem;
   transform: translateY(-50%);
   border-radius: 50% 50% 50% 50% / 10% 10% 60% 60%;
   z-index: 5;
@@ -95,7 +107,7 @@ body {
 
 .logo img:hover {
   position: relative;
-  transform: scaleX(1);
+  transform: scaleX(-1);
   max-width: 100px;
   height: auto;
   display: block;
@@ -111,17 +123,17 @@ body {
 .nav-list {
   display: flex;
   flex-wrap: wrap;
-  gap: 1rem;
+  gap: 0rem;
   list-style: none;
   padding: 0;
-  margin: 0;
+  margin: 0 0 0 -0.5rem;
   align-items: center;
 }
 
 li {
   display: flex;
   align-items: center;
-  padding: 0.5rem 1rem;
+  padding: 0.5rem 0.5rem;
   text-align: center;
 }
 
@@ -139,7 +151,9 @@ li {
 
 .header li a:hover {
   color: var(--text-dark-red);
-  background: var(--background-light-yellow);
+  background: var(
+    --background-very-light-yellow
+  ); /* very-light-yellow = light-yellow : opacité 50% */
   padding: 0.5rem 1rem;
   border-radius: 4px;
   border: 1px solid transparent;
@@ -151,6 +165,10 @@ li {
 
 .header li a:focus {
   border: 1px solid var(--text-red);
+}
+
+.header .separateur {
+  color: var(--text-dark-red);
 }
 
 .footer li a {
@@ -175,13 +193,17 @@ li {
   color: var(--background-dark-khaki);
 }
 
+.footer .separateur {
+  color: var(--background-khaki);
+}
+
 /* ====================================================================================================== */
 /* === HERO VIDEO === */
 .hero {
   color: var(--background-light-yellow);
   position: relative;
   width: 100vw;
-  height: 100vh;
+  height: 148vh;
   overflow: hidden;
   display: flex;
   align-items: center;
@@ -202,22 +224,28 @@ li {
   z-index: 0;
 }
 
-.hero-video {
+video.hero-video {
   filter: blur(2px);
   position: absolute;
-  top: 0;
+  top: 0rem;
   left: 0;
   width: 100%;
-  height: 100%;
+  height: auto;
   object-fit: cover;
-  z-index: -1;
   transform: scale(1.1);
+  filter: blur(2px);
+  z-index: -1;
 }
 
 .hero-content {
   text-decoration: none;
   position: relative;
   z-index: 1;
+}
+
+.hero-content h1 {
+  letter-spacing: 0.05rem;
+  font-size: 3rem;
 }
 
 .hero p {
