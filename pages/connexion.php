@@ -45,7 +45,7 @@ session_start();
                     </button>
                 </form>
 
-                <p>Vous n'êtes pas déjà <a href="connexion.php">inscrit</a> ?</p>
+                <p>Vous n'avez pas encore de compte ? <a href="inscription.php">Inscrivez-vous</a> pour laisser un commentaire.</p>
             </div>
 
         </section>
