@@ -15,7 +15,7 @@
                 <?php else : ?>
                     <li><a href="<?= BASE_PATH ?>index.php">Accueil</a></li>
                     <li class="separateur">|</li>
-                    <li><a href="<?= BASE_PATH ?>pages/connexion.php">Laisser un commentaire</a></li>
+                    <li><a href="<?= BASE_PATH ?>pages/inscription.php">S'inscrire pour commenter</a></li>
                     <li class="separateur">|</li>
                     <li><a href="<?= BASE_PATH ?>pages/livre-or.php">Consulter le livre d'or</a></li>
                     <li class="separateur">|</li>

@@ -19,10 +19,10 @@ session_start();
     <?php include_once '../includes/header.php'; ?>
 
     <main>
-        <div class="form-page">
+        <div class="register-form-page">
 
             <h1>Inscription</h1>
-            <p>Créez votre compte pour laisser un message</p>
+            <p class="form-catchphrase">Créez votre compte pour laisser un message</p>
 
             <section class="register-form">
                 <div class="form-content">
@@ -32,20 +32,32 @@ session_start();
 
                         <div class="form-group">
                             <label for="">Nom d'utilisateur</label>
-                            <input type="" id="" name="" required
+                            <input
+                                type="text"
+                                id="name"
+                                name="name"
+                                required
                                 value=""
                                 placeholder="Votre nom d'utilisateur">
                         </div>
 
                         <div class="form-group">
                             <label for="password">Mot de passe</label>
-                            <input type="password" id="password" name="password" required
+                            <input
+                                type="password"
+                                id="password"
+                                name="password"
+                                required
                                 placeholder="Votre mot de passe">
                         </div>
 
                         <div class="form-group">
                             <label for="password">Confirmation du mot de passe</label>
-                            <input type="password" id="password" name="password" required
+                            <input
+                                type="password"
+                                id="password_confirm"
+                                name="password_confirm"
+                                required
                                 placeholder="Votre mot de passe">
                         </div>
 
@@ -57,7 +69,8 @@ session_start();
                 </div>
             </section>
 
-            <p>Vous possédez déjà un compte ? <a href="connexion.php">Connectez-vous</a> pour laisser un commentaire.</p>
+            <p class="form-bottom">Vous avez déjà un compte ?</p>
+            <p class="form-bottom"><a href="connexion.php">Connectez-vous.</a></p>
 
         </div>
     </main>

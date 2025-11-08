@@ -19,10 +19,10 @@ session_start();
     <?php include_once '../includes/header.php'; ?>
 
     <main>
-        <div class="form-page">
+        <div class="login-form-page">
 
             <h1>Connexion</h1>
-            <p>Connectez-vous à votre compte</p>
+            <p class="form-catchphrase">Connectez-vous à votre compte</p>
 
             <section class="login-form">
                 <div class="form-content">
@@ -32,14 +32,22 @@ session_start();
 
                         <div class="form-group">
                             <label for="">Nom d'utilisateur</label>
-                            <input type="" id="" name="" required
+                            <input
+                                type=""
+                                id=""
+                                name=""
+                                required
                                 value=""
                                 placeholder="Votre nom d'utilisateur">
                         </div>
 
                         <div class="form-group">
                             <label for="password">Mot de passe</label>
-                            <input type="password" id="password" name="password" required
+                            <input
+                                type="password"
+                                id="password"
+                                name="password"
+                                required
                                 placeholder="Votre mot de passe">
                         </div>
 
@@ -51,7 +59,8 @@ session_start();
                 </div>
             </section>
 
-            <p>Vous n'avez pas encore de compte ? <a href="inscription.php">Inscrivez-vous</a> pour laisser un commentaire.</p>
+            <p class="form-bottom">Vous n'avez pas encore de compte ?</p>
+            <p class="form-bottom"><a href="inscription.php">Inscrivez-vous.</a></p>
 
         </div>
     </main>

@@ -6,7 +6,7 @@
 
 :root {
   --dark-red: rgb(125, 0, 0);
-  --red: rgb(175, 0, 0);
+  --red: rgb(185, 0, 0);
   --light-yellow: rgb(250, 250, 200);
   --very-light-yellow: rgba(250, 250, 200, 0.5);
   --khaki: rgb(200, 200, 150);
@@ -282,53 +282,117 @@ video.hero-video {
 
 /* FORMULAIRES */
 
-.form-page h1 {
+.register-form-page,
+.login-form-page {
+  min-height: 128vh;
+  align-content: center;
+}
+
+.register-form-page h1 {
+  margin-top: -11rem;
+  margin-bottom: 1.5rem;
   letter-spacing: 0.03rem;
   color: var(--red);
 }
 
+.login-form-page h1 {
+  margin-top: -8rem;
+  margin-bottom: 1.5rem;
+  letter-spacing: 0.03rem;
+  color: var(--red);
+}
+
+.form-catchphrase {
+  font-weight: 800;
+}
+
 .register-form,
 .login-form {
-  margin: 2rem 0 2rem 0;
+}
+
+.form-content {
+  margin: 2.5rem 0 0.5rem 0;
 }
 
 .form-group {
-  margin-top: 1rem;
+  text-align: left;
+  padding: 0 40% 0 40%;
+  margin-top: 0.5rem;
 }
 
 input {
-  color: var(--dark-red);
+  color: black;
   background: white;
   text-decoration: none;
-  font-weight: bold;
-  padding: 0.25rem 0rem 0.25rem 0.25rem;
-  border-radius: 8px;
-  border: 1px solid var(--dark-red);
+  font-weight: normal;
+  padding: 0.1rem;
+  border-radius: 2.5px;
+  border: 1.5px solid var(--dark-red);
+  width: 100%;
 }
 
 .form-button {
-  margin-top: 1.5rem;
+  margin-top: 1.75rem;
+  margin-bottom: 1.25rem;
 }
 
 button {
+  border: 2px solid var(--dark-red);
   letter-spacing: 0.07rem;
   color: var(--red);
-  background: var(--khaki);
+  background: var(--light-yellow);
   text-decoration: none;
+  font-size: 100%; /* remet à la bonne taille */
   font-weight: bold;
   padding: 0.5rem 1rem;
   border-radius: 4px;
-  border: 2px solid transparent;
+  box-shadow: 0px 0.1px 1.2px var(--dark-khaki);
 }
 
 button:hover {
+  color: var(--red);
   background: var(--light-yellow);
   text-decoration: none;
-  color: inherit;
   font-weight: bold;
   padding: 0.5rem 1rem;
   border-radius: 4px;
-  border: 2px solid var(--khaki);
+  border: 2px solid var(--red);
+  box-shadow: 0px 0.25px 2.5px var(--dark-khaki);
+}
+
+button:active {
+  color: var(--red);
+  background: var(--light-yellow);
+  text-decoration: none;
+  font-weight: bold;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  border: 2px solid var(--red);
+  box-shadow: 0px 1px 5px var(--dark-khaki);
+}
+
+.form-bottom {
+  font-size: 90%;
+  margin-top: -0.35rem;
+  margin-bottom: 0.35rem;
+}
+
+.form-bottom a {
+  color: var(--red);
+}
+
+/* LIVRE D'OR */
+
+.livredor-page {
+  min-height: 128vh;
+  align-content: center;
+}
+
+.livredor-page h1 {
+  margin-top: -7rem;
+  margin-bottom: 1.5rem;
+  letter-spacing: 0.03rem;
+  color: var(--red);
 }
 
 /* ====================================================================================================== */

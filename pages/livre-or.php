@@ -19,14 +19,18 @@ session_start();
     <?php include_once '../includes/header.php'; ?>
 
     <main>
-        <h1>Livre d'or</h1>
-        <p><a href='connexion.php'>Laissez un commentaire</a> ou <a href='livre-or.php'>consultez le livre d'or</a> :</p>
+        <div class="livredor-page">
 
-        <section class="livredor">
-            <div class="livredor-content">
-                commentaire / nom d'utilisateur (id) / heure
-            </div>
-        </section>
+            <h1>Livre d'or</h1>
+            <p><a href='connexion.php'>Laissez un commentaire</a> ou <a href='livre-or.php'>consultez le livre d'or</a> :</p>
+
+            <section class="livredor">
+                <div class="livredor-content">
+                    commentaire / nom d'utilisateur (id) / heure
+                </div>
+            </section>
+
+        </div>
     </main>
 
     <?php include_once '../includes/footer.php'; ?>
