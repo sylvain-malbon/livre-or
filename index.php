@@ -12,6 +12,7 @@ require_once './config/config.php';
     <title>Livre d'or</title>
     <link rel="stylesheet" href="assets/css/style.css">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Lato:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
 </head>
 
 <body>
@@ -27,7 +28,7 @@ require_once './config/config.php';
             </video>
 
             <div class="hero-content">
-                <h1>Bienvenue dans le livre d'or</h1>
+                <h1>Bienvenue dans notre <span class="logotype">Livre d'or</span></h1>
                 <p>
                     <a href="pages/connexion.php">Laissez un commentaire</a>
                     ou
