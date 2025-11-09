@@ -1,6 +1,36 @@
 <?php
 require_once '../config/config.php';
 session_start();
+
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    $login = trim($_POST['name']);
+    $password = $_POST['password'];
+    $password_confirm = $_POST['password_confirm'];
+
+    // Vérification basique
+    if (empty($login) || empty($password) || empty($password_confirm)) {
+        $error = "Tous les champs sont obligatoires.";
+    } elseif ($password !== $password_confirm) {
+        $error = "Les mots de passe ne correspondent pas.";
+    } else {
+        // Hash du mot de passe
+        $hashedPassword = password_hash($password, PASSWORD_DEFAULT);
+
+        // Insertion dans la table utilisateurs
+        $stmt = $pdo->prepare("INSERT INTO utilisateurs (login, password) VALUES (:login, :password)");
+        try {
+            $stmt->execute([
+                ':login' => $login,
+                ':password' => $hashedPassword
+            ]);
+            header("Location: connexion.php?success=1");
+            exit;
+        } catch (PDOException $e) {
+            // Gestion d'erreur (par ex. login déjà existant)
+            $error = "Erreur lors de l'inscription : " . $e->getMessage();
+        }
+    }
+}
 ?>
 
 <!DOCTYPE html>
@@ -29,6 +59,14 @@ session_start();
             <section class="register-form">
                 <div class="form-content">
 
+                    <!-- début PHP -->
+
+                    <?php if (!empty($error)): ?>
+                        <p style="color:red;"><?= htmlspecialchars($error) ?></p>
+                    <?php endif; ?>
+
+                    <!-- fin PHP -->
+
                     <form method="POST" class="form" action="">
                         <input type="hidden" name="" value="">
 
@@ -39,7 +77,7 @@ session_start();
                                 id="name"
                                 name="name"
                                 required
-                                value=""
+                                value="<?= isset($login) ? htmlspecialchars($login) : '' ?>"
                                 placeholder="Votre nom d'utilisateur">
                         </div>
 

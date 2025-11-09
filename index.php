@@ -37,6 +37,15 @@ require_once './config/config.php';
             </video>
 
             <div class="hero-content">
+
+                <!-- début PHP -->
+
+                <?php if (!empty($_GET['logout'])): ?>
+                    <p style="color:green;">Vous êtes bien déconnecté.</p>
+                <?php endif; ?>
+
+                <!-- début PHP -->
+
                 <h1>Bienvenue dans notre <span class="logotype">Livre d'or</span></h1>
                 <p>
                     <a href="pages/connexion.php">Laissez un commentaire</a>

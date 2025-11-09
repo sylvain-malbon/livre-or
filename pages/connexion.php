@@ -1,6 +1,38 @@
 <?php
 require_once '../config/config.php';
 session_start();
+
+// Message de succès après inscription
+if (!empty($_GET['success'])) {
+    $success = "Inscription réussie ! Vous pouvez vous connecter.";
+}
+
+// Traitement du formulaire de connexion
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    $login = trim($_POST['login']);
+    $password = $_POST['password'];
+
+    if (empty($login) || empty($password)) {
+        $error = "Tous les champs sont obligatoires.";
+    } else {
+        // Vérifier si l'utilisateur existe
+        $stmt = $pdo->prepare("SELECT * FROM utilisateurs WHERE login = :login");
+        $stmt->execute([':login' => $login]);
+        $user = $stmt->fetch(PDO::FETCH_ASSOC);
+
+        if ($user && password_verify($password, $user['password'])) {
+            // Connexion réussie → on stocke l'utilisateur en session
+            $_SESSION['user_id'] = $user['id'];
+            $_SESSION['login'] = $user['login'];
+
+            // Redirection vers la page d'accueil ou livre d'or
+            header("Location: ../index.php");
+            exit;
+        } else {
+            $error = "Nom d'utilisateur ou mot de passe incorrect.";
+        }
+    }
+}
 ?>
 
 <!DOCTYPE html>
@@ -29,17 +61,30 @@ session_start();
             <section class="login-form">
                 <div class="form-content">
 
+
+                    <!-- début PHP -->
+
+                    <?php if (!empty($success)): ?>
+                        <p style="color:green;"><?= htmlspecialchars($success) ?></p>
+                    <?php endif; ?>
+
+                    <?php if (!empty($error)): ?>
+                        <p style="color:red;"><?= htmlspecialchars($error) ?></p>
+                    <?php endif; ?>
+
+                    <!-- fin PHP -->
+
                     <form method="POST" class="form" action="">
                         <input type="hidden" name="" value="">
 
                         <div class="form-group">
                             <label for="">Nom d'utilisateur</label>
                             <input
-                                type=""
-                                id=""
-                                name=""
+                                type="text"
+                                id="login"
+                                name="login"
                                 required
-                                value=""
+                                value="<?= isset($login) ? htmlspecialchars($login) : '' ?>"
                                 placeholder="Votre nom d'utilisateur">
                         </div>
 
