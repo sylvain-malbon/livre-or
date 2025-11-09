@@ -6,9 +6,10 @@
 
 :root {
   --dark-red: rgb(125, 0, 0);
-  --red: rgb(185, 0, 0);
-  --light-yellow: rgb(250, 250, 200);
+  --red: rgb(165, 0, 0);
   --very-light-yellow: rgba(250, 250, 200, 0.5);
+  --light-yellow: rgb(250, 250, 200);
+  --light-khaki: rgb(230, 230, 180);
   --khaki: rgb(200, 200, 150);
   --dark-khaki: rgb(100, 100, 50);
 }
@@ -167,6 +168,42 @@ li {
   background: var(--very-light-yellow); /* very-light-yellow = light-yellow : opacité 50% */
 }
 
+.initiale {
+  margin-top: -0.45rem;
+  margin-right: -0.45rem;
+  font-family: 'Grenze Gotisch', 'Montserrat', 'Lato', sans-serif;
+  font-size: 166%;
+  font-weight: 900;
+  font-style: oblique 1.75deg;
+}
+
+.s {
+  margin-top: -0.45rem;
+  margin-right: -0.5rem;
+  font-family: 'Grenze Gotisch', 'Montserrat', 'Lato', sans-serif;
+  font-size: 166%;
+  font-weight: 900;
+  font-style: oblique 1.75deg;
+}
+
+.apostrophe {
+  margin-top: -0.25rem;
+  margin-right: -0.35rem;
+  margin-left: -0.1rem;
+  font-family: 'Grenze Gotisch', 'Montserrat', 'Lato', sans-serif;
+  font-size: 166%;
+  font-weight: 600;
+  font-style: oblique 5deg;
+}
+
+.header .logotype {
+  margin-left: -0.25rem;
+  font-family: 'Great Vibes', 'Montserrat', 'Lato', sans-serif;
+  font-size: 1.66rem;
+  font-weight: 900;
+  letter-spacing: -0.033rem;
+}
+
 .header .separateur {
   color: var(--dark-red);
 }
@@ -231,6 +268,10 @@ li {
   z-index: 0;
 }
 
+.hero::after {
+  background-color: black;
+}
+
 video.hero-video {
   filter: blur(2px);
   position: absolute;
@@ -257,7 +298,7 @@ video.hero-video {
 }
 
 .hero-content .logotype {
-  font-family: 'Great Vibes';
+  font-family: 'Great Vibes', 'Montserrat', 'Lato', sans-serif;
   font-size: 4.25rem;
   font-weight: bold;
   letter-spacing: -0.1rem;
@@ -301,6 +342,14 @@ video.hero-video {
 
 .register-form-page,
 .login-form-page {
+  background: content-box
+    linear-gradient(
+      to bottom,
+      var(--light-yellow) 0%,
+      var(--light-yellow) 25%,
+      var(--light-khaki) 55%,
+      var(--light-yellow) 100%
+    );
   min-height: 128vh;
   align-content: center;
 }
