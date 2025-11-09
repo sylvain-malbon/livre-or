@@ -21,7 +21,7 @@
                 <li class="separateur">|</li>
                 <li><a href="<?= BASE_PATH ?>pages/inscription.php" title="register">S'inscrire pour commenter</a></li>
                 <li class="separateur">|</li>
-                <li><a href="<?= BASE_PATH ?>pages/livre-or.php" title="livre d'or">Consulter le Livre d'or</a></li>
+                <li><a href="<?= BASE_PATH ?>pages/livre-or.php" title="livre d'or">Consulter le livre d'or</a></li>
                 <li class="separateur">|</li>
                 <li><a href="<?= BASE_PATH ?>pages/connexion.php" title="connexion">Se connecter</a></li>
             <?php endif; ?>

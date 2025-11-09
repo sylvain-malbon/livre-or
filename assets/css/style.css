@@ -57,9 +57,6 @@ body {
   background: var(--khaki);
 }
 
-.container {
-}
-
 .header-navbar {
   position: relative;
   display: flex;
@@ -343,7 +340,8 @@ video.hero-video {
 /* FORMULAIRES */
 
 .register-form-page,
-.login-form-page {
+.login-form-page,
+.comment-form-page {
   background: content-box
     linear-gradient(
       to bottom,
@@ -366,12 +364,18 @@ video.hero-video {
   color: var(--red);
 }
 
+.comment-form-page h1 {
+  letter-spacing: 0.03rem;
+  color: var(--red);
+}
+
 .form-catchphrase {
   font-weight: 800;
 }
 
 .register-form,
-.login-form {
+.login-form,
+.omment-form {
 }
 
 .form-content {
@@ -456,6 +460,49 @@ button:active {
 
 .form-bottom a {
   color: var(--red);
+}
+
+/* COMMENTAIRE.PHP : Styles spécifiques pour le Textarea */
+textarea {
+  outline: none;
+  color: var(--dark-red);
+  background: white;
+  text-decoration: none;
+  font-family: 'Montserrat', 'Lato', sans-serif;
+  font-weight: normal;
+  padding: 0.5rem;
+  border-radius: 2.5px;
+  border: 1.5px solid var(--dark-red);
+  width: 100%;
+  resize: vertical;
+  min-height: 120px;
+}
+
+textarea:hover {
+  outline: 0.75px solid var(--red);
+  color: var(--red);
+  background: white;
+  text-decoration: none;
+  font-weight: normal;
+  padding: 0.5rem;
+  border-radius: 2.5px;
+  border: 1.5px solid var(--red);
+  width: 100%;
+}
+
+textarea:focus {
+  outline: 0.75px solid var(--red);
+  color: var(--dark-red);
+  background: white;
+  border: 1.5px solid var(--red);
+}
+
+/* COMMENTAIRE.PHP : logotype adapté */
+.form-bottom .logotype {
+  font-family: 'Great Vibes', 'Montserrat', 'Lato', sans-serif;
+  font-size: 1.66rem;
+  font-weight: 500;
+  letter-spacing: -0.033rem;
 }
 
 /* LIVRE D'OR */
