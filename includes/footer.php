@@ -5,17 +5,17 @@
         <ul class="nav-list">
 
             <?php if (isset($_SESSION['login'])) : ?>
-                <li><a href="<?= BASE_PATH ?>index.php" title="accueil">Accueil</a></li>
+                <li><a href="<?= BASE_PATH ?>index.php" title="accueil">accueil</a></li>
                 <li class="separateur">|</li>
                 <li><a href="<?= BASE_PATH ?>pages/profil.php" title="profil">
-                        Modifier mon profil
+                        profil utilisateur
                     </a></li>
                 <li class="separateur">|</li>
-                <li><a href="<?= BASE_PATH ?>pages/commentaire.php" title="commenter">Laisser un commentaire</a></li>
+                <li><a href="<?= BASE_PATH ?>pages/commentaire.php" title="commenter">laisser un commentaire</a></li>
                 <li class="separateur">|</li>
-                <li><a href="<?= BASE_PATH ?>pages/livre-or.php" title="livre d'or">Consulter le Livre d'or</a></li>
+                <li><a href="<?= BASE_PATH ?>pages/livre-or.php" title="livre d'or">consulter le livre d'or</a></li>
                 <li class="separateur">|</li>
-                <li><a href="<?= BASE_PATH ?>pages/deconnexion.php" title="déconnexion">Déconnexion</a></li>
+                <li><a href="<?= BASE_PATH ?>pages/deconnexion.php" title="déconnexion">déconnexion</a></li>
             <?php else : ?>
                 <li><a href="<?= BASE_PATH ?>index.php" title="accueil">Accueil</a></li>
                 <li class="separateur">|</li>

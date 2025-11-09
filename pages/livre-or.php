@@ -1,6 +1,25 @@
 <?php
 require_once '../config/config.php';
 session_start();
+
+// Message de succès après ajout de commentaire
+if (!empty($_GET['success'])) {
+    $success = "Votre commentaire a été publié avec succès !";
+}
+
+// Récupérer tous les commentaires avec les informations des utilisateurs
+// Organisés du plus récent au plus ancien
+$stmt = $pdo->query("
+    SELECT 
+        c.id,
+        c.commentaire,
+        c.date,
+        u.login
+    FROM commentaires c
+    INNER JOIN utilisateurs u ON c.id_utilisateur = u.id
+    ORDER BY c.date DESC
+");
+$commentaires = $stmt->fetchAll(PDO::FETCH_ASSOC);
 ?>
 
 <!DOCTYPE html>
@@ -24,11 +43,45 @@ session_start();
         <div class="livredor-page">
 
             <h1>Livre d'or</h1>
-            <p><a href='connexion.php'>Laissez un commentaire</a> ou <a href='livre-or.php'>consultez le livre d'or</a> :</p>
+
+            <?php if (isset($_SESSION['user_id'])): ?>
+                <p class="form-catchphrase">Bienvenue <?= htmlspecialchars($_SESSION['login']) ?> !</p>
+                <p><a href='commentaire.php'>Laissez un commentaire</a>
+                <?php else: ?>
+                <p>Pour laisser un commentaire</p>
+                <span>
+                    <a href='inscription.php'>Inscrivez-vous</a>
+                    ou
+                    <a href='connexion.php'>Connectez-vous</a>
+                </span>
+            <?php endif; ?>
+
+            <!-- Message de succès -->
+            <?php if (!empty($success)): ?>
+                <p style="color:green; margin: 1rem 0;"><?= htmlspecialchars($success) ?></p>
+            <?php endif; ?>
 
             <section class="livredor">
                 <div class="livredor-content">
-                    commentaire / nom d'utilisateur (id) / heure
+
+                    <?php if (empty($commentaires)): ?>
+                        <p style="margin: 2rem 0;">Aucun commentaire pour le moment. Soyez le premier à partager votre avis avec nous !</p>
+                    <?php else: ?>
+                        <?php foreach ($commentaires as $comment): ?>
+                            <div class="commentaire-item">
+                                <p class="commentaire-info">
+                                    Posté le
+                                    <strong><?= date('d/m/Y', strtotime($comment['date'])) ?></strong>
+                                    par
+                                    <strong><?= htmlspecialchars($comment['login']) ?></strong>
+                                </p>
+                                <p class="commentaire-text">
+                                    <?= nl2br(htmlspecialchars($comment['commentaire'])) ?>
+                                </p>
+                            </div>
+                        <?php endforeach; ?>
+                    <?php endif; ?>
+
                 </div>
             </section>
 
@@ -38,3 +91,5 @@ session_start();
     <?php include_once '../includes/footer.php'; ?>
 
 </body>
+
+</html>

@@ -54,7 +54,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <main>
         <div class="comment-form-page">
 
-            <h1>Laissez un commentaire</h1>
+            <h1>Laisser un commentaire</h1>
             <p class="form-catchphrase">Partagez votre expérience avec nous</p>
 
             <section class="comment-form">

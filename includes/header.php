@@ -10,7 +10,7 @@
                 <li><a href="<?= BASE_PATH ?>index.php" title="accueil"><span class="initiale">A</span>ccueil</a></li>
                 <li class="separateur">|</li>
                 <li><a href="<?= BASE_PATH ?>pages/profil.php" title="profil">
-                        <span class="initiale">M</span>odifier mon profil
+                        <span class="initiale">P</span>rofil utilisateur
                     </a></li>
                 <li class="separateur">|</li>
                 <li><a href="<?= BASE_PATH ?>pages/commentaire.php" title="commenter"><span class="initiale">L</span>aisser un commentaire</a></li>
