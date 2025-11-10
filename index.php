@@ -36,7 +36,7 @@ require_once './config/config.php';
                 <!-- début PHP -->
 
                 <?php if (!empty($_GET['logout'])): ?>
-                    <p style="color:green;">Vous êtes bien déconnecté.</p>
+                    <p style="color:green; position: absolute; top: -10rem; left: 19rem;">Vous êtes bien déconnecté.</p>
                 <?php endif; ?>
 
                 <!-- début PHP -->
