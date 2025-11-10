@@ -83,7 +83,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <?php include_once '../includes/header.php'; ?>
 
     <main>
-        <div class="login-form-page">
+        <div class="profile-form-page">
 
             <h1>Profil utilisateur</h1>
             <p class="form-catchphrase">Vous pouvez modifier vos informations personnelles ici</p>

@@ -46,43 +46,47 @@ $commentaires = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
             <?php if (isset($_SESSION['user_id'])): ?>
                 <p class="form-catchphrase">Bienvenue <?= htmlspecialchars($_SESSION['login']) ?> !</p>
-                <p><a href='commentaire.php'>Laissez un commentaire</a>
+                <p><a class="array-top" href='commentaire.php'>Laissez un commentaire</a>
                 <?php else: ?>
-                <p>Pour laisser un commentaire</p>
+                <p class="form-catchphrase">Pour laisser un commentaire,</p>
                 <span>
-                    <a href='inscription.php'>Inscrivez-vous</a>
+                    <a class="array-top" href='inscription.php'>Inscrivez-vous</a>
                     ou
-                    <a href='connexion.php'>Connectez-vous</a>
+                    <a class="array-top" href='connexion.php'>Connectez-vous</a>
                 </span>
             <?php endif; ?>
 
-            <!-- Message de succès -->
+            <!-- début PHP-->
+
             <?php if (!empty($success)): ?>
                 <p style="color:green; margin: 1rem 0;"><?= htmlspecialchars($success) ?></p>
             <?php endif; ?>
 
+            <!-- fin PHP-->
+
             <section class="livredor">
-                <div class="livredor-content">
+                <div class="livredor-array">
 
-                    <?php if (empty($commentaires)): ?>
-                        <p style="margin: 2rem 0;">Aucun commentaire pour le moment. Soyez le premier à partager votre avis avec nous !</p>
-                    <?php else: ?>
-                        <?php foreach ($commentaires as $comment): ?>
-                            <div class="commentaire-item">
-                                <p class="commentaire-info">
-                                    Posté le
-                                    <strong><?= date('d/m/Y', strtotime($comment['date'])) ?></strong>
-                                    par
-                                    <strong><?= htmlspecialchars($comment['login']) ?></strong>
-                                </p>
-                                <p class="commentaire-text">
-                                    <?= nl2br(htmlspecialchars($comment['commentaire'])) ?>
-                                </p>
-                            </div>
-                        <?php endforeach; ?>
-                    <?php endif; ?>
+                    <div class="array-group">
+                        <?php if (empty($commentaires)): ?>
+                            <p style="margin: 2rem 0;">Aucun commentaire pour le moment. Soyez le premier à partager votre avis avec nous !</p>
+                        <?php else: ?>
+                            <?php foreach ($commentaires as $comment): ?>
+                                <div class="commentaire-item">
+                                    <p class="commentaire-info">
+                                        Posté le
+                                        <strong><?= date('d/m/Y', strtotime($comment['date'])) ?></strong>
+                                        par
+                                        <strong><?= htmlspecialchars($comment['login']) ?></strong>
+                                    </p>
+                                    <p class="commentaire-text">
+                                        <?= nl2br(htmlspecialchars($comment['commentaire'])) ?>
+                                    </p>
+                                </div>
+                            <?php endforeach; ?>
+                        <?php endif; ?>
 
-                </div>
+                    </div>
             </section>
 
         </div>

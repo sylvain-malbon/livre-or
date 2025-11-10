@@ -107,7 +107,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             </section>
 
             <p class="form-bottom">Vous n'avez pas encore de compte ?</p>
-            <p class="form-bottom"><a href="inscription.php">Inscrivez-vous.</a></p>
+            <p class="form-bottom"><a href="inscription.php">Inscrivez-vous</a></p>
 
         </div>
     </main>

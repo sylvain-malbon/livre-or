@@ -341,7 +341,8 @@ video.hero-video {
 
 .register-form-page,
 .login-form-page,
-.comment-form-page {
+.comment-form-page,
+.profile-form-page {
   background: content-box
     linear-gradient(
       to bottom,
@@ -523,6 +524,57 @@ textarea:focus {
 .livredor-page h1 {
   letter-spacing: 0.03rem;
   color: var(--red);
+
+  font-family: 'Great Vibes', 'Montserrat', 'Lato', sans-serif;
+  font-size: 4rem;
+  font-weight: 900;
+  letter-spacing: -0.07rem;
+}
+
+/* .array-top correspond au tableau dans LIVRE D'OR */
+.array-top {
+  color: var(--red);
+}
+
+.livredor {
+}
+
+.livredor-array {
+}
+
+.livredor-group {
+}
+
+/* .array-group est dans le tableau du LIVRE D'OR */
+.array-group {
+  text-align: center;
+  padding: 0 30% 0 30%;
+  margin-top: 2.25rem;
+}
+
+/* .commentaire-item, .commentaire-info et .commentaire-text sont dans le LIVRE D'OR */
+.commentaire-item {
+  text-align: center;
+}
+.commentaire-info {
+  padding: 0.25rem;
+  margin-top: 1.25rem;
+  text-align: left;
+}
+
+.commentaire-text {
+  color: var(--special-dark-khaki);
+  background: white;
+  margin-top: 0.25rem;
+  text-align: justify;
+  padding: 0.25rem;
+  border-radius: 4px;
+  border: 1.5px solid var(--khaki);
+  width: 100%;
+}
+
+/* PROFIL */
+.profile-form-page h1 {
 }
 
 /* ====================================================================================================== */

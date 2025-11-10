@@ -110,7 +110,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             </section>
 
             <p class="form-bottom">Vous avez déjà un compte ?</p>
-            <p class="form-bottom"><a href="connexion.php">Connectez-vous.</a></p>
+            <p class="form-bottom"><a href="connexion.php">Connectez-vous</a></p>
 
         </div>
     </main>
