@@ -77,7 +77,9 @@ $commentaires = $stmt->fetchAll(PDO::FETCH_ASSOC);
                                     <div class="commentaire-item">
                                         <p class="commentaire-info">
                                             Posté le
-                                            <?= date('d/m/Y', strtotime($comment['date'])) ?>
+                                            <?= date('d.m.Y', strtotime($comment['date'])) ?>
+                                            à
+                                            <?= date('H:i', strtotime($comment['date'])) ?>
                                             par
                                             <?= htmlspecialchars($comment['login']) ?>
                                         </p>
