@@ -26,12 +26,7 @@ require_once './config/config.php';
             <!-- Même "z-index" (calque) que la vidéo mais en dehors de la balise "video" -->
             <img src="/assets/images/hero-fallback-image_livre-or.png" alt="image livre d'or" class="hero-fallback" />
 
-            <video autoplay muted loop playsinline class="hero-video blurred">
-                <source src="assets/videos/hero-video_livre-or.mp4" type="video/mp4" alt="vidéo livre d'or">
-                Votre navigateur ne supporte pas la vidéo.
-            </video>
-
-            <video autoplay muted loop playsinline class="hero-video focused">
+            <video autoplay muted loop playsinline class="hero-video">
                 <source src="assets/videos/hero-video_livre-or.mp4" type="video/mp4" alt="vidéo livre d'or">
                 Votre navigateur ne supporte pas la vidéo.
             </video>
