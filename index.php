@@ -50,7 +50,7 @@ require_once './config/config.php';
                 <p>
                     <a href="pages/connexion.php">Laissez un commentaire</a>
                     ou
-                    <a href="pages/livre-or.php">consultez le livre d'or</a>
+                    <a href="pages/livre-or.php">Consultez le livre d'or</a>
                 </p>
             </div>
 

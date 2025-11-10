@@ -56,7 +56,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         <div class="login-form-page">
 
             <h1>Connexion</h1>
-            <p class="form-catchphrase">Connectez-vous à votre compte</p>
+            <p class="form-catchphrase">Connectez-vous pour laisser un commentaire</p>
 
             <section class="login-form">
                 <div class="form-content">

@@ -54,7 +54,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         <div class="register-form-page">
 
             <h1>Inscription</h1>
-            <p class="form-catchphrase">Créez votre compte pour laisser un message</p>
+            <p class="form-catchphrase">Inscrivez-vous pour laisser un commentaire</p>
 
             <section class="register-form">
                 <div class="form-content">

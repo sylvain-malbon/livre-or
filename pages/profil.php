@@ -126,7 +126,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                         </div>
 
                         <div class="form-group">
-                            <label for="confirm_password">Confirmer le nouveau mot de passe</label>
+                            <label for="confirm_password">Confirmation du nouveau mot de passe</label>
                             <input
                                 type="password"
                                 id="confirm_password"

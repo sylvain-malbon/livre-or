@@ -293,6 +293,7 @@ video.hero-video {
 }
 
 .hero-content h1 {
+  margin-top: -3rem; /* laisser cette margin */
   letter-spacing: 0.05rem;
   font-size: 3rem;
 }
@@ -356,16 +357,19 @@ video.hero-video {
 }
 
 .register-form-page h1 {
+  margin-top: -17.25rem; /* laisser cette margin */
   letter-spacing: 0.03rem;
   color: var(--red);
 }
 
 .login-form-page h1 {
+  margin-top: -20.33rem; /* laisser cette margin */
   letter-spacing: 0.03rem;
   color: var(--red);
 }
 
 .comment-form-page h1 {
+  margin-top: -16.5rem; /* laisser cette margin */
   letter-spacing: 0.03rem;
   color: var(--red);
 }
@@ -521,12 +525,15 @@ textarea:focus {
   align-content: center;
 }
 
+.livredor-margin {
+  margin: 3rem 0 3rem 0;
+}
+
 .livredor-page h1 {
   letter-spacing: 0.03rem;
   color: var(--red);
-
   font-family: 'Great Vibes', 'Montserrat', 'Lato', sans-serif;
-  font-size: 4rem;
+  font-size: 3.75rem;
   font-weight: 900;
   letter-spacing: -0.07rem;
 }
@@ -565,9 +572,9 @@ textarea:focus {
 .commentaire-text {
   color: var(--special-dark-khaki);
   background: white;
-  margin-top: 0.25rem;
+  margin-top: 0rem; /* pas besoin de margin au final */
   text-align: justify;
-  padding: 0.25rem;
+  padding: 0.5rem;
   border-radius: 4px;
   border: 1.5px solid var(--khaki);
   width: 100%;
@@ -575,6 +582,8 @@ textarea:focus {
 
 /* PROFIL */
 .profile-form-page h1 {
+  color: var(--red);
+  margin-top: -17rem; /* laisser cette margin */
 }
 
 /* ====================================================================================================== */
