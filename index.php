@@ -41,7 +41,6 @@ require_once './config/config.php';
 
                 <!-- début PHP -->
 
-                <h1>Bienvenue dans notre <span class="logotype">Livre d'or</span></h1>
                 <p>
                 <h2>
                     Partagez vos impressions avec d'autres utilisateurs
@@ -50,6 +49,9 @@ require_once './config/config.php';
                 ou
                 <a href="pages/livre-or.php">Consultez le livre d'or</a>
                 </p>
+
+                <h1>Bienvenue dans notre <span class="logotype">Livre d'or</span></h1>
+
             </div>
 
         </section>
