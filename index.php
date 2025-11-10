@@ -48,9 +48,12 @@ require_once './config/config.php';
 
                 <h1>Bienvenue dans notre <span class="logotype">Livre d'or</span></h1>
                 <p>
-                    <a href="pages/connexion.php">Laissez un commentaire</a>
-                    ou
-                    <a href="pages/livre-or.php">Consultez le livre d'or</a>
+                <h2>
+                    Partagez vos impressions avec d'autres utilisateurs
+                </h2>
+                <a href="pages/connexion.php">Laissez un commentaire</a>
+                ou
+                <a href="pages/livre-or.php">Consultez le livre d'or</a>
                 </p>
             </div>
 

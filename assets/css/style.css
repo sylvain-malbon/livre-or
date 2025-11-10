@@ -293,9 +293,17 @@ video.hero-video {
 }
 
 .hero-content h1 {
-  margin-top: -3rem; /* laisser cette margin */
+  /* margin-top: -3rem; ancien margin */
+  margin-top: -23rem; /* laisser ce margin */
+  margin-bottom: 18rem; /* idem */
   letter-spacing: 0.05rem;
   font-size: 3rem;
+}
+
+.hero-content h2 {
+  margin-top: -2rem;
+  margin-bottom: 0.25rem;
+  letter-spacing: 0.03rem;
 }
 
 .hero-content .logotype {
@@ -380,7 +388,7 @@ video.hero-video {
 
 .register-form,
 .login-form,
-.omment-form {
+.comment-form {
 }
 
 .form-content {
