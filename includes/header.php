@@ -4,6 +4,10 @@
         <a href="<?= BASE_PATH ?>index.php" class="logo" title="Accueil">
             <img src="<?= BASE_PATH ?>assets/images/logo_livre-or.png" alt="Logo du site">
         </a>
+
+        <!-- EFFET PROFONDEUR : ajout d'une bande derrière le logo  -->
+        <div class="logo-back"></div>
+
         <ul class="nav-list">
 
             <?php if (isset($_SESSION['login'])) : ?>
@@ -29,6 +33,7 @@
             <?php endif; ?>
 
         </ul>
+
     </nav>
 
 </header>
